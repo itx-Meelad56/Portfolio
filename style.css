@@ -16,7 +16,6 @@ body {
 header {
   /* width: 100%; */
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  padding: 130px 20px;
   min-height: 100vh;
   height: auto;
 }
@@ -128,6 +127,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 130px 20px;
 }
 
 .user-info {
@@ -229,8 +229,7 @@ header {
   color: white;
   animation: bounce 2s infinite;
   position: absolute;
-  margin-top: 60px;
-  bottom: px;
+  bottom: 35px;
   /* adjust according to header height */
   left: 50%;
   transform: translateX(-50%);
@@ -399,7 +398,6 @@ header {
 
 .about-page header {
   background: #152b35;
-  padding: 135px 20px;
   min-height: 100vh;
   height: auto;
 }
@@ -413,16 +411,21 @@ header {
   line-height: 30px;
 }
 
+.about-page .about {
+padding: 135px 20px;
+}
+
 
 /* project-page-style*/
 
 .project-page header {
   background: linear-gradient(to bottom, #242630, #202a36ec);
-  padding: 150px 20px;
   min-height: 100vh;
   height: auto;
 }
-
+.project-section {
+padding: 150px 20px;
+}
 
 .project-section .project-info {
   text-align: center;
@@ -517,15 +520,11 @@ header {
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
 }
 
-
-.contact-page header {
-  padding: 100px 20px;
-}
-
 .contact-section {
   color: white;
   padding: 4rem 2rem;
   font-family: 'Segoe UI', sans-serif;
+  padding: 100px 20px;
 }
 
 .heading-block {
@@ -696,16 +695,16 @@ textarea:focus {
     row-gap: 30px;
   }
 
-  .project-page header {
-    height: 230vh;
-  }
-
   .project-grid {
     row-gap: 30px;
   }
 
   .project-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arrow-down {
+    display: none;
   }
 }
 
@@ -858,8 +857,4 @@ textarea:focus {
     grid-template-columns: repeat(1, 1fr);
   }
 
-
-  .contact-page h1 {
-    font-size: 34px;
-  }
 }
