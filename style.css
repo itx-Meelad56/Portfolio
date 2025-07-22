@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   color: white;
+  overflow-x:hidden;
 }
 
 * {
@@ -47,6 +48,15 @@ header {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
   letter-spacing: 2px;
+  animation: myname 4s linear;
+}
+@keyframes myname {
+    0% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0px)
+    }
 }
 
 .nav-list .nav-links {
@@ -107,6 +117,25 @@ header {
 
 /* hero section style */
 
+.content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 130px 20px;
+  animation: content 3s linear ;
+}
+
+@keyframes content {
+    0% {
+      transform: translateX(1400px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+}
+
+
 .content .user-img .profile-img {
   width: 400px;
   height: 350px;
@@ -123,12 +152,7 @@ header {
   display: inline-block;
 }
 
-.content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 130px 20px;
-}
+
 
 .user-info {
   margin-top: 70px;
@@ -296,6 +320,20 @@ header {
   margin-top: 80px;
 }
 
+.skill {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.6s ease-out;
+}
+
+.skill.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* .skill:nth-child(1) { transition-delay: 0s; }
+.skill:nth-child(2) { transition-delay: 0.1s; }
+.skill:nth-child(3) { transition-delay: 0.2s; } */
 .skill {
   background: rgba(10, 124, 158, 0.308);
   padding: 30px;
@@ -662,7 +700,14 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
   }
-
+@keyframes content {
+  0% {
+    transform: translateX(1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
   .user-info {
     text-align: center;
   }
@@ -782,6 +827,17 @@ textarea:focus {
 
 /*✅ Small screen ke liye responsive  638 width  */
 @media (max-width: 638px) {
+
+@keyframes content {
+    0% {
+      transform: translateX(500px);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+}
+
 
   .user-info .user-name {
     font-size: 34px;

@@ -13,4 +13,16 @@ menuButton.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    } else {
+      entry.target.classList.remove("show");  // remove class when out of view
+    }
+  });
+});
+
+const skills = document.querySelectorAll('.skill');
+skills.forEach(skill => observer.observe(skill));
 
